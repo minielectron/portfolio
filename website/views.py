@@ -1,7 +1,8 @@
 from django.shortcuts import render
-
+from .models import Project
 
 app_name="website"
 
 def home(request):
-    return render(request,"website/home.html")
+    projects = Project.objects.all()
+    return render(request,"website/home.html",{"projects": projects})
