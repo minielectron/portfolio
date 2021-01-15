@@ -4,12 +4,16 @@
 <div class="d-flex justify-content-center" style="color: crimson;">
     <h1 style="padding: 20dp;">I have written {{count}} blog{{count|pluralize}}</h1>
 </div>
-{% for blog in blogs %}
+
+<div class="jumbotron">
+    {% for blog in blogs %}
     <div>
         <a href="{% url 'blog:detail' blog.id %}" style="color: blue;"><h3>{{blog.title}}</h3></a>
         <p>{{blog.description|striptags|truncatechars:100}}</p>
         <p>{{blog.date|date:'M d Y'|upper}}</p>
     </div>
 {%endfor%}
+
+</div>
 {% endblock body %}
 

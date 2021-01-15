@@ -23,8 +23,8 @@
                 {% if project.action_url %}
                     <h1>{{project.title}}</h1>
                     <p>{{project.description|truncatechars:100 }}</p>
-                    <a href="{{project.action_url}}">
-                        <img src="{{project.image.url}}" height="150px" width="300px"/>
+                    <a href="{{project.action_url}}" target="_blank">
+                        <img src="{{project.image.url}}" height="150px" width="300px"}/>
                     </a>
                 {% else %}
                     <img src="{{project.image.url}}" height="150px" width="300px" />
